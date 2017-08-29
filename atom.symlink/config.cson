@@ -1,62 +1,51 @@
 "*":
+  "atom-material-ui":
+    colors:
+      abaseColor: "#5c6bc0"
+      genAccent: true
+      paintCursor: true
+      predefinedColor: "Indigo"
+    fonts:
+      fontSize: 16
+    tabs: {}
+    ui:
+      panelContrast: true
+      panelShadows: true
   core:
     autoHideMenuBar: true
+    automaticallyUpdate: false
     disabledPackages: [
       "metrics"
       "exception-reporting"
-      "linter-jshint"
-      "go-rename"
       "welcome"
       "whitespace"
+      "terminal-plus"
+      "seti-icons"
+      "browser-refresh-on-save"
+      "language-gfm"
     ]
     hideGitIgnoredFiles: true
+    projectHome: "/Users/voosierra/Dev/Code"
     telemetryConsent: "no"
     themes: [
-      "nord-atom-ui"
-      "nord-atom-syntax"
+      "nucleus-dark-ui"
+      "atom-material-syntax"
     ]
     titleBar: "custom"
   editor:
-    fontFamily: "Anonymous Pro"
-    fontSize: 15
+    fontFamily: "Roboto Mono"
+    fontSize: 16
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
-  "file-icons":
-    coloured: false
-    tabPaneIcon: false
-  "go-plus":
-    currentPanelHeight: "22.545219638242894vh"
-    disabledBundledPackages: [
-      "go-rename"
-      "go-debug"
-    ]
-    get:
-      timeout: 0
-    lint:
-      args: [
-        "--disable-all"
-        "--json"
-        "--vendor"
-        "."
-      ]
-    navigator:
-      mode: "guru"
-    panelDisplayMode: "closed"
-    test:
-      runTestsOnSave: false
-      runTestsWithVerboseFlag: true
-  "go-rename": {}
-  gofmt:
-    formatTool: "goreturns"
   "linter-ui-default":
-    panelHeight: 116
+    panelHeight: 60
     showPanel: true
-  "tree-view":
-    hideVcsIgnoredFiles: true
-  "unity-ui":
-    showIcons: true
+  "markdown-preview-plus":
+    previewSplitPaneDir: "down"
+    useGitHubStyle: true
+  "tree-view": {}
   wakatime:
     apikey: "Saved in your ~/.wakatime.cfg file"
   welcome:

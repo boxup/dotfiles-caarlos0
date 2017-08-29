@@ -1,38 +1,44 @@
 #!/bin/sh
 if test "$(which apm)"; then
-	apm upgrade --confirm false
+  apm upgrade --confirm false
 
-	modules="
+  modules="
     atom-beautify
+    atom-clock
+    atom-material-syntax
     atom-wrap-in-tag
+    browser-refresh-on-save
+    busy-signal
     color-picker
+    docker
     editorconfig
     file-icons
-    go-plus
-    go-rename
+    git-plus
     language-diff
     language-docker
-    language-puppet
-    language-terraform
     linter
-    linter-jshint
+    linter-docker
     linter-ruby
+    linter-ui-default
+    minimap
+    nucleus-dark-ui
     sort-lines
+    terminal-plus
     wakatime
   "
-	for module in $modules; do
-		if test ! -d "$HOME/.atom/packages/$module"; then
-			apm install "$module"
-		fi
-	done
+  for module in $modules; do
+    if test ! -d "$HOME/.atom/packages/$module"; then
+      apm install "$module"
+    fi
+  done
 
-	modules="
+  modules="
     metrics
     exception-reporting
   "
-	for module in $modules; do
-		if test -d "$HOME/.atom/packages/$module"; then
-			apm remove "$module"
-		fi
-	done
+  for module in $modules; do
+    if test -d "$HOME/.atom/packages/$module"; then
+      apm remove "$module"
+    fi
+  done
 fi
