@@ -1,5 +1,5 @@
 #!/bin/zsh
-export HOME=/Volumes/M-Data/Users/VooBoy
+#export HOME=/Volumes/M-Data/Users/VooBoy
 
 # shortcut to this dotfiles path is $DOTFILES
 export DOTFILES="$HOME/.dotfiles"
