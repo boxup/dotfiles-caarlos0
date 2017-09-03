@@ -1,4 +1,6 @@
 #!/bin/zsh
+export HOME=/Volumes/M-Data/Users/VooBoy
+
 # shortcut to this dotfiles path is $DOTFILES
 export DOTFILES="$HOME/.dotfiles"
 
@@ -18,7 +20,8 @@ for file in ${(M)config_files:#*/path.zsh}; do
 done
 
 # load antibody plugins
-source ~/.zsh_plugins.sh
+#source ~/.zsh_plugins.sh
+source $DOTFILES/.zsh_plugins.sh
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
