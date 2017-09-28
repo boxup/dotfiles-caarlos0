@@ -26,6 +26,25 @@ unload_agent() {
 
 test -z "$TRAVIS_JOB_ID" && sudo -v
 
+
+###############################################################################
+# General UI/UX                                                               #
+###############################################################################
+
+# Set computer name
+COMPUTERNAME="VooHub's iMac"
+HOSTNAME='voohub'
+LOCALHOSTNAME='voohub'
+
+## Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName $COMPUTERNAME
+sudo scutil --set HostName $HOSTNAME
+sudo scutil --set LocalHostName $LOCALHOSTNAME
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $LOCALHOSTNAME
+
+## Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
 echo ""
 echo "› System:"
 echo "  › Disable press-and-hold for keys in favor of key repeat"
