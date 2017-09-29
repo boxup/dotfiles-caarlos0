@@ -58,6 +58,6 @@
   "unity-ui":
     showIcons: true
   wakatime:
-    apikey: "Saved in your ~/.wakatime.cfg file"
+    apikey: "Enter your api key..."
   welcome:
     showOnStartup: false
