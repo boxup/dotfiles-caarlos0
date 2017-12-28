@@ -52,7 +52,6 @@
     formatTool: "goreturns"
   "linter-ui-default":
     panelHeight: 116
-    showPanel: true
   "tree-view":
     hideVcsIgnoredFiles: true
   "unity-ui":
