@@ -1,25 +1,5 @@
 #!/bin/sh
 
-__pyenv_started=0
+export PATH="/usr/local/opt/openssl/bin:$PATH"
 
-__pyenv_init() {
-	test $__pyenv_started = 0 && {
-		eval "$(command pyenv init -)"
-		__pyenv_started=1
-	}
-}
-
-pyenv() {
-	__pyenv_init
-	command pyenv "$@"
-}
-
-python() {
-	__pyenv_init
-	command python "$@"
-}
-
-pip() {
-	__pyenv_init
-	command pip "$@"
-}
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
