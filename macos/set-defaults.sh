@@ -94,7 +94,7 @@ echo "  › Set graphite highlight color"
 defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.862745"
 
 echo "  › Show battery percent"
-defaults write com.apple.menuextra.battery ShowPercent -bool true
+#defaults write com.apple.menuextra.battery ShowPercent -bool true
 
 if [ ! -z "$TRAVIS_JOB_ID" ]; then
 	echo "  › Speed up wake from sleep to 24 hours from an hour"
@@ -121,7 +121,7 @@ echo "  › Expand save panel by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 echo "  › Set sidebar icon size to small"
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
 echo "  › Show status bar"
 defaults write com.apple.finder ShowStatusBar -bool true
