@@ -7,7 +7,6 @@ alias d='docker $*'
 alias dc='docker-compose $*'
 alias dm='docker-machine $*'
 
-
 # Get latest container ID
 alias dl="docker ps -l -q"
 
@@ -49,7 +48,7 @@ dri() { docker rmi $(docker images -q); }
 dbu() { docker build -t=$1 .; }
 
 # Show all alias related docker
-dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
+dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/" | sed "s/['|\']//g" | sort; }
 
 # Convert docker-machine commands to aliases directly
 alias dmactive="docker-machine active"
