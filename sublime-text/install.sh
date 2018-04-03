@@ -2,8 +2,8 @@
 test -z "$KEEP_SUBLIME" || exit 0
 
 for d in \
-	"$HOME/Library/Application Support/Sublime Text 3" \
-	"$HOME/.config/sublime-text-3"; do
+	"$HOME/Library/Application Support/Sublime Text" \
+	"$HOME/.config/sublime-text"; do
 	test -d "$d" && {
 		ST3_LOCAL="$d"
 		break
@@ -24,9 +24,9 @@ PKG_CTRL_FILE="$ST3_LOCAL/Installed Packages/Package Control.sublime-package"
 
 # Link keymaps
 for platform in OSX Linux; do
-	ln -sf "$DOTFILES/sublime-text-3/Default.sublime-keymap" \
+	ln -sf "$DOTFILES/sublime-text/Default.sublime-keymap" \
 		"$ST3_LOCAL/Packages/User/Default ($platform).sublime-keymap"
 done
 
 # Link all sublime-settings files
-ln -sf "$DOTFILES"/sublime-text-3/*.sublime-settings "$ST3_LOCAL/Packages/User/"
+ln -sf "$DOTFILES"/sublime-text/*.sublime-settings "$ST3_LOCAL/Packages/User/"
