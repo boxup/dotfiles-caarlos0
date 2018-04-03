@@ -3,9 +3,9 @@
 # Docker alias and function
 # ------------------------------------
 
-alias d='docker $*'
-alias dc='docker-compose $*'
-alias dm='docker-machine $*'
+alias d='docker'
+#alias dc='docker-compose $*'
+#alias dm='docker-machine $*'
 
 # Get latest container ID
 alias dl="docker ps -l -q"
@@ -33,22 +33,22 @@ alias dex="docker exec -i -t"
 alias dlog="docker logs -f"
 
 # Stop all containers
-dstop() { docker stop $(docker ps -a -q); }
+#dstop() { docker stop $(docker ps -a -q); }
 
 # Remove all containers
-drm() { docker rm $(docker ps -a -q); }
+#drm() { docker rm $(docker ps -a -q); }
 
 # Stop and Remove all containers
 alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 
 # Remove all images
-dri() { docker rmi $(docker images -q); }
+#dri() { docker rmi $(docker images -q); }
 
 # Dockerfile build, e.g., $dbu tcnksm/test
-dbu() { docker build -t=$1 .; }
+#dbu() { docker build -t=$1 .; }
 
 # Show all alias related docker
-dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/" | sed "s/['|\']//g" | sort; }
+#dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/" | sed "s/['|\']//g" | sort; }
 
 # Convert docker-machine commands to aliases directly
 alias dmactive="docker-machine active"
@@ -75,7 +75,7 @@ alias dmhelp="docker-machine help"
 alias dpa="docker ps -a"
 
 # list all untagged images (dangling)
-alias dangline="docker images -f "dangling=true" -q"
+#alias dangline="docker images -f "dangling=true" -q"
 
 # get dockerfile from image
 
@@ -83,7 +83,7 @@ alias dangline="docker images -f "dangling=true" -q"
 alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm centurylink/dockerfile-from-image"
 
 # list images and merge with tags
-alias dit="docker images |awk 'NR==1{l=length(\$0)}{printf \"%-20s %-20s %-20s\t%s:%s\n\",substr(\$0,l-51,20),substr(\$0,l-31,20),substr(\$0,l-11),\$1,\$2}'"
+#alias dit="docker images |awk 'NR==1{l=length(\$0)}{printf \"%-20s %-20s %-20s\t%s:%s\n\",substr(\$0,l-51,20),substr(\$0,l-31,20),substr(\$0,l-11),\$1,\$2}'"
 
 # run jq via container. So you can run all commands in http://stedolan.github.io/jq/tutorial/ as normal, just replace jq with djq
 
