@@ -1,4 +1,6 @@
 "*":
+  "circle-ci":
+    apiToken: "$CI_TOKEN"
   core:
     autoHideMenuBar: true
     disabledPackages: [
@@ -12,8 +14,8 @@
     hideGitIgnoredFiles: true
     telemetryConsent: "no"
     themes: [
-      "nord-atom-ui"
-      "nord-atom-syntax"
+      "atom-dark-ui"
+      "atom-dark-syntax"
     ]
     titleBar: "custom"
   editor:
@@ -52,6 +54,7 @@
     formatTool: "goreturns"
   "linter-ui-default":
     panelHeight: 116
+  term3: {}
   "tree-view":
     hideVcsIgnoredFiles: true
   "unity-ui":

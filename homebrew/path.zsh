@@ -1,7 +1,8 @@
 #!/bin/sh
 
+export PATH=$(cat /etc/paths | xargs | tr " " :)
 # export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+#export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
 export PATH="/usr/local/opt/llvm/bin:$PATH"

@@ -18,6 +18,7 @@ if test "$(which apm)"; then
     linter-jshint
     linter-ruby
     sort-lines
+	term3
     wakatime
   "
 	for module in $modules; do
